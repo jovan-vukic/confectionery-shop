@@ -10,7 +10,7 @@ public class Product {
 
     private int id = staticID++;
     private String name;
-    private String image;
+    private int image;
     private String description;
     private int price;
     private String type; // Allowed values: 'torte', 'kolaci'
@@ -19,11 +19,11 @@ public class Product {
 
     static {
         // Add cakes
-        products.add(new Product("Jagodinka", "cakes/img3.jpg", "Torta od jagode je ukusna poslastica napravljena od sočnih jagoda, kremastog fila i mekanog biskvita.", 1500, "torte"));
-        products.add(new Product("Karamelno blaženstvo", "cakes/img5.jpg", "Torta od karamele je neodoljiva poslastica koja kombinuje bogat ukus karamelizovanog šećera sa nežnim slojevima sočnog biskvita, prelivena kremastim karamelnim filom.", 2500, "torte"));
-        products.add(new Product("Čoko simfonija", "cakes/img6.jpg", "Torte od čokolade posute voćem su ukusni kolači koji kombinuju bogat ukus čokolade sa svežim voćem, pružajući savršenu harmoniju slatkoće i osveženja.", 2800, "torte"));
-        products.add(new Product("Citrusni prasak", "cakes/img7.jpg", "Torte od limuna su osvežavajuće slatkiši sa sočnim slojevima kiselkastog limunovog fila, obično ukrašene šlagom ili koricama limuna.", 1900, "torte"));
-        products.add(new Product("Lešnje", "cakes/img8.jpg", "Torte od lešnika su poslastice od kremastog fila od lešnika, slojeva mekanog biskvita i obično su dekorisane mlečnom čokoladom ili sitno seckanim lešnicima.", 3100, "torte"));
+        products.add(new Product("Jagodinka", R.drawable.img3, "Torta od jagode je ukusna poslastica napravljena od sočnih jagoda, kremastog fila i mekanog biskvita.", 1500, "torte"));
+        products.add(new Product("Karamelno blaženstvo", R.drawable.img5, "Torta od karamele je neodoljiva poslastica koja kombinuje bogat ukus karamelizovanog šećera sa nežnim slojevima sočnog biskvita, prelivena kremastim karamelnim filom.", 2500, "torte"));
+        products.add(new Product("Čoko simfonija", R.drawable.img6, "Torte od čokolade posute voćem su ukusni kolači koji kombinuju bogat ukus čokolade sa svežim voćem, pružajući savršenu harmoniju slatkoće i osveženja.", 2800, "torte"));
+        products.add(new Product("Citrusni prasak", R.drawable.img7, "Torte od limuna su osvežavajuće slatkiši sa sočnim slojevima kiselkastog limunovog fila, obično ukrašene šlagom ili koricama limuna.", 1900, "torte"));
+        products.add(new Product("Lešnje", R.drawable.img8, "Torte od lešnika su poslastice od kremastog fila od lešnika, slojeva mekanog biskvita i obično su dekorisane mlečnom čokoladom ili sitno seckanim lešnicima.", 3100, "torte"));
 
         products.get(0).addIngredient("jagode");
         products.get(0).addIngredient("šećer");
@@ -56,11 +56,11 @@ public class Product {
         products.get(4).addIngredient("puter");
 
         // Add cookies
-        products.add(new Product("Brownie", "cookies/img10.jpg", "Brownie je bogati i čokoladni kolač, često sa gustim i sočnim srednjim delom, koji se često služi posut prah šećerom.", 700, "kolaci"));
-        products.add(new Product("Vanilice", "cookies/img11.jpg", "Kolač vanilice je ukusan kolač sa mekanim testom obogaćenim aromom vanile.", 600, "kolaci"));
-        products.add(new Product("Čupavci", "cookies/img12.jpg", "Čupavci su tradicionalni slatkiši sastavljeni od mekane baze od čokolade ili kakaa, obložene kokosovim brašnom i često natopljene ukusnim sirupom.", 750, "kolaci"));
-        products.add(new Product("Medenjaci", "cookies/img13.jpg", "Kolači od meda i začina, često oblikovani u različite oblike i ukrašeni glazurom.", 500, "kolaci"));
-        products.add(new Product("Orahnjača", "cookies/img14.jpeg", "Orahnjača je tradicionalni slatki kolač s punjenjem od mlevenih oraha, uvijen u testo.", 900, "kolaci"));
+        products.add(new Product("Brownie", R.drawable.img10, "Brownie je bogati i čokoladni kolač, često sa gustim i sočnim srednjim delom, koji se često služi posut prah šećerom.", 700, "kolaci"));
+        products.add(new Product("Vanilice", R.drawable.img11, "Kolač vanilice je ukusan kolač sa mekanim testom obogaćenim aromom vanile.", 600, "kolaci"));
+        products.add(new Product("Čupavci", R.drawable.img12, "Čupavci su tradicionalni slatkiši sastavljeni od mekane baze od čokolade ili kakaa, obložene kokosovim brašnom i često natopljene ukusnim sirupom.", 750, "kolaci"));
+        products.add(new Product("Medenjaci", R.drawable.img13, "Kolači od meda i začina, često oblikovani u različite oblike i ukrašeni glazurom.", 500, "kolaci"));
+        products.add(new Product("Orahnjača", R.drawable.img14, "Orahnjača je tradicionalni slatki kolač s punjenjem od mlevenih oraha, uvijen u testo.", 900, "kolaci"));
 
         products.get(5).addIngredient("brašno");
         products.get(5).addIngredient("šećer");
@@ -127,7 +127,7 @@ public class Product {
         }
     }
 
-    public Product(String name, String image, String description, int price, String type) {
+    public Product(String name, int image, String description, int price, String type) {
         this.name = name;
         this.image = image;
         this.description = description;
@@ -169,11 +169,11 @@ public class Product {
         this.description = description;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 

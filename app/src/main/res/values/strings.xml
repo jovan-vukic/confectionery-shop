@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Slatki zalogaji</string>
+    <string name="product_name_placeholder">Proizvod</string>
+    <string name="price">%1$d RSD</string>
 </resources>
