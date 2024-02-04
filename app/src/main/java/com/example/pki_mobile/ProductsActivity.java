@@ -13,6 +13,7 @@ public class ProductsActivity extends AppCompatActivity {
         // Set up the activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_products);
+        getSupportActionBar().setTitle("All products");
 
         // Set up the RecyclerView for the products
         RecyclerView recyclerView = findViewById(R.id.products_recycler_view);

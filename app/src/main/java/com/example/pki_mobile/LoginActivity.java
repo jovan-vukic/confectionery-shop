@@ -1,9 +1,11 @@
 package com.example.pki_mobile;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.pki_mobile.utility.User;
 
@@ -13,6 +15,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        getSupportActionBar().setTitle("Uloguj se");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Get references to views in activity
         EditText username = findViewById(R.id.username_login_activity);
@@ -37,5 +41,15 @@ public class LoginActivity extends AppCompatActivity {
             // If username and password are incorrect show error
             Toast.makeText(LoginActivity.this, "Pogrešno korisničko ime ili šifra", Toast.LENGTH_LONG).show();
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        // If user presses back button in action bar, go back to previous activity
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

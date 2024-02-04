@@ -1,7 +1,9 @@
 package com.example.pki_mobile;
 
 import android.content.Intent;
+import android.view.MenuItem;
 import android.widget.*;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.pki_mobile.utility.Product;
@@ -13,6 +15,8 @@ public class ProductDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_details);
+        getSupportActionBar().setTitle("Detalji o proizvodu");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         int productID = getIntent().getIntExtra("productId", -1);
         if (productID == -1 || productID > Product.products.size()) {
@@ -50,6 +54,9 @@ public class ProductDetailsActivity extends AppCompatActivity {
             if (User.currentUser == null) {
                 // Redirect to login page if user is not logged in
                 Intent intent = new Intent(ProductDetailsActivity.this, LoginActivity.class);
+
+                // Show error message
+                Toast.makeText(this, "Prvo treba da se ulogujete", Toast.LENGTH_LONG).show();
                 startActivity(intent);
             } else {
                 // Add product to cart with quantity selected
@@ -61,5 +68,15 @@ public class ProductDetailsActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        // If user presses back button in action bar, go back to previous activity
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
