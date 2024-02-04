@@ -1,11 +1,11 @@
-package com.example.pki_mobile;
+package com.example.pki_mobile.utility;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Promotion {
     private static int staticID = 1;
-    public static List<Promotion> promotions = new ArrayList<>();
+    public static final List<Promotion> promotions = new ArrayList<>();
 
     private int id = staticID++;
     private String name;

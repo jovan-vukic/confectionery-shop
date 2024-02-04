@@ -1,4 +1,4 @@
-package com.example.pki_mobile;
+package com.example.pki_mobile.utility;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -6,7 +6,8 @@ import java.util.List;
 
 public class User {
     private static int staticID = 1;
-    public static List<User> users = new ArrayList<>();
+    public static final List<User> users = new ArrayList<>();
+    public static User currentUser = null;
 
     private int id = staticID++;
     private String name;

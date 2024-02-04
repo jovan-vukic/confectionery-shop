@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Slatki zalogaji</string>
-    <string name="product_name_placeholder">Proizvod</string>
-    <string name="price">%1$d RSD</string>
+    <string name="product_text_placeholder">Proizvod</string>
+    <string name="price_simple">%1$d RSD</string>
+    <string name="price_complex">Cena: %1$d RSD</string>
+    <string name="quantity">"Količina: "</string>
+    <string name="add_to_cart">Dodaj u korpu</string>
 </resources>
