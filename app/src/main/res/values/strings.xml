@@ -5,4 +5,7 @@
     <string name="price_complex">Cena: %1$d RSD</string>
     <string name="quantity">"Količina: "</string>
     <string name="add_to_cart">Dodaj u korpu</string>
+    <string name="username_placeholder">Korisničko ime</string>
+    <string name="password_placeholder">Šifra</string>
+    <string name="login">Uloguj se</string>
 </resources>

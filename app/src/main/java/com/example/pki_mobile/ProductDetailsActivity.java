@@ -38,7 +38,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         price.setText(getString(R.string.price_complex, product.getPrice()));
 
         // Set adapter to quantity spinner with quantity values
-        Integer[] quantityValues = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        Integer[] quantityValues = new Integer[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         Spinner quantitySpinner = findViewById(R.id.quantity_spinner_product_details);
 
         ArrayAdapter<Integer> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, quantityValues);
@@ -47,13 +47,19 @@ public class ProductDetailsActivity extends AppCompatActivity {
         // Create add to cart button click listener
         Button addToCartButton = findViewById(R.id.add_to_cart_btn_product_details);
         addToCartButton.setOnClickListener(view -> {
-            // Add product to cart with quantity selected
-            int quantity = (Integer) quantitySpinner.getSelectedItem();
-            // User.currentUser.addCartItem(product, quantity);
+            if (User.currentUser == null) {
+                // Redirect to login page if user is not logged in
+                Intent intent = new Intent(ProductDetailsActivity.this, LoginActivity.class);
+                startActivity(intent);
+            } else {
+                // Add product to cart with quantity selected
+                int quantity = (Integer) quantitySpinner.getSelectedItem();
+                User.currentUser.addCartItem(product, quantity);
 
-            // Show success message and go back to previous activity
-            Toast.makeText(this, "Proizvod je dodat u korpu", Toast.LENGTH_LONG).show();
-            finish();
+                // Show success message and go back to previous activity
+                Toast.makeText(this, "Proizvod je dodat u korpu", Toast.LENGTH_LONG).show();
+                finish();
+            }
         });
     }
 }
