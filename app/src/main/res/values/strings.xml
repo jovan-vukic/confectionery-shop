@@ -10,7 +10,7 @@
     <string name="password_placeholder">Šifra</string>
     <string name="login">Uloguj se</string>
     <string name="cart">Korpa</string>
-    <string name="products">Products</string>
+    <string name="products">Proizvodi</string>
     <string name="product_details">Detalji o proizvodu</string>
     <string name="invalid_product">Proizvod nije pronađen</string>
     <string name="login_required">Prvo treba da se ulogujete</string>
@@ -20,4 +20,15 @@
     <string name="total_price">Ukupno: %1$d RSD</string>
     <string name="order_success">Zahtev za poručivanjem je uspešno poslat</string>
     <string name="order">Plati</string>
+    <string name="about_us">O nama</string>
+    <string name="about_us_description">
+        Adresa: ul. Slatkih Snova 123, Beograd
+        \n\nTelefon: +381 12 345 678
+        \n\nEmail: info@slatkizalogaji.com
+        \n\n\nRadno Vreme:
+        \n\nPonedeljak - Subota: 9:00 - 20:00
+        \n\nNedelja: Zatvoreno
+    </string>
+    <string name="products_option">Pregled proizvoda</string>
+    <string name="promotions_option">Početna</string>
 </resources>

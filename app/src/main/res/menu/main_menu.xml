@@ -2,9 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-            android:id="@+id/cart_menu"
+            android:id="@+id/cart_option_menu"
             android:title="@string/cart"
             android:icon="@drawable/ic_baseline_shopping_cart_24"
+            app:showAsAction="ifRoom"/>
+    <item
+            android:id="@+id/login_option_menu"
+            android:title="@string/login"
+            android:icon="@drawable/ic_baseline_login_24"
+            app:showAsAction="ifRoom"/>
+    <item
+            android:id="@+id/user_option_menu"
+            android:title="@string/login"
+            android:icon="@drawable/ic_baseline_user_24"
             app:showAsAction="ifRoom"
-            app:tint="@color/button_color"/>
+            android:visible="false"/>
+    <item
+            android:id="@+id/promotions_option_menu"
+            android:title="@string/promotions_option"/>
+    <item
+            android:id="@+id/products_option_menu"
+            android:title="@string/products_option"/>
+    <item
+            android:id="@+id/about_us_option_menu"
+            android:title="@string/about_us"/>
 </menu>

@@ -35,10 +35,9 @@ public class ProductsActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.cart_menu) {
+        if (item.getItemId() == R.id.cart_option_menu) {
             if (User.currentUser == null) {
                 // User is not logged in so redirect to login page
                 Toast.makeText(this, getString(R.string.login_required), Toast.LENGTH_LONG).show();
@@ -49,6 +48,16 @@ public class ProductsActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, CartActivity.class);
                 startActivity(intent);
             }
+            return true;
+        } else if (item.getItemId() == R.id.login_option_menu) {
+            // User is not logged in so redirect to login page
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.about_us_option_menu) {
+            // Redirect to About Us page
+            Intent intent = new Intent(this, AboutUsActivity.class);
+            startActivity(intent);
             return true;
         }
         return super.onOptionsItemSelected(item);
