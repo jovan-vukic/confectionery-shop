@@ -1,4 +1,4 @@
-package com.example.pki_mobile;
+package com.example.pki_mobile.adapters;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -7,7 +7,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
+import com.example.pki_mobile.ProductDetailsActivity;
+import com.example.pki_mobile.R;
 import com.example.pki_mobile.utility.Product;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -32,7 +35,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHo
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public @NotNull ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // Inflate the product item layout
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_item, parent, false);
 

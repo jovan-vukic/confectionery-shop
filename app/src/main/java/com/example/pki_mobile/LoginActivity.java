@@ -15,7 +15,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().setTitle("Uloguj se");
+        getSupportActionBar().setTitle(R.string.login);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Get references to views in activity
@@ -32,14 +32,14 @@ public class LoginActivity extends AppCompatActivity {
             for (User user : User.users) {
                 if (user.getUsername().equals(usernameString) && user.getPassword().equals(passwordString)) {
                     User.currentUser = user;
-                    Toast.makeText(LoginActivity.this, "Uspešno ste ulogovani", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, R.string.login_success, Toast.LENGTH_SHORT).show();
                     finish();
                     return;
                 }
             }
 
             // If username and password are incorrect show error
-            Toast.makeText(LoginActivity.this, "Pogrešno korisničko ime ili šifra", Toast.LENGTH_LONG).show();
+            Toast.makeText(LoginActivity.this, R.string.login_error, Toast.LENGTH_LONG).show();
         });
     }
 

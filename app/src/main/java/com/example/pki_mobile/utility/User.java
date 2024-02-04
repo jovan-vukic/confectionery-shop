@@ -28,8 +28,8 @@ public class User {
                 "0641122334",
                 "Kralja Petra 25",
                 "kupac",
-                "kupac",
-                "pass"
+                "k",
+                "p"
         ));
 
         users.add(new User(
@@ -38,8 +38,8 @@ public class User {
                 "0653344556",
                 "Nikole Tesle 18",
                 "zaposleni",
-                "zaposleni",
-                "pass"
+                "z",
+                "p"
         ));
     }
 

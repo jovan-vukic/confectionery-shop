@@ -3,9 +3,21 @@
     <string name="product_text_placeholder">Proizvod</string>
     <string name="price_simple">%1$d RSD</string>
     <string name="price_complex">Cena: %1$d RSD</string>
-    <string name="quantity">"Količina: "</string>
+    <string name="quantity">Količina:</string>
+    <string name="quantity_value">%1$d x</string>
     <string name="add_to_cart">Dodaj u korpu</string>
     <string name="username_placeholder">Korisničko ime</string>
     <string name="password_placeholder">Šifra</string>
     <string name="login">Uloguj se</string>
+    <string name="cart">Korpa</string>
+    <string name="products">Products</string>
+    <string name="product_details">Detalji o proizvodu</string>
+    <string name="invalid_product">Proizvod nije pronađen</string>
+    <string name="login_required">Prvo treba da se ulogujete</string>
+    <string name="added_to_cart">Proizvod je dodat u korpu</string>
+    <string name="login_error">Pogrešno korisničko ime ili šifra</string>
+    <string name="login_success">Uspešno ste ulogovani</string>
+    <string name="total_price">Ukupno: %1$d RSD</string>
+    <string name="order_success">Zahtev za poručivanjem je uspešno poslat</string>
+    <string name="order">Plati</string>
 </resources>

@@ -15,17 +15,18 @@ public class ProductDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_details);
-        getSupportActionBar().setTitle("Detalji o proizvodu");
+        getSupportActionBar().setTitle(R.string.product_details);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // Get product with given ID
         int productID = getIntent().getIntExtra("productId", -1);
         if (productID == -1 || productID > Product.products.size()) {
             // Print error message & go back
-            Toast.makeText(this, "Proizvod nije pronađen", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.invalid_product, Toast.LENGTH_SHORT).show();
             finish();
             return;
         }
-        Product product = Product.products.get(productID);
+        Product product = Product.products.get(productID - 1);
 
         // Set title and description
         TextView title = findViewById(R.id.title_product_details);
@@ -56,7 +57,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                 Intent intent = new Intent(ProductDetailsActivity.this, LoginActivity.class);
 
                 // Show error message
-                Toast.makeText(this, "Prvo treba da se ulogujete", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.login_required, Toast.LENGTH_LONG).show();
                 startActivity(intent);
             } else {
                 // Add product to cart with quantity selected
@@ -64,7 +65,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                 User.currentUser.addCartItem(product, quantity);
 
                 // Show success message and go back to previous activity
-                Toast.makeText(this, "Proizvod je dodat u korpu", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.added_to_cart, Toast.LENGTH_LONG).show();
                 finish();
             }
         });
