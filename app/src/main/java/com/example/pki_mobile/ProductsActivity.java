@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.pki_mobile.adapters.ProductsAdapter;
 import com.example.pki_mobile.utility.Product;
 import com.example.pki_mobile.utility.User;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,7 +67,6 @@ public class ProductsActivity extends AppCompatActivity {
         // Set up the RecyclerView for the products
         RecyclerView recyclerView = findViewById(R.id.products_recycler_view);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        recyclerView.setAdapter(new ProductsAdapter(Product.products));
     }
 
     @Override
@@ -133,15 +133,21 @@ public class ProductsActivity extends AppCompatActivity {
 
     private void updateRecyclerView(String selectedType) {
         // Filter the products based on the selected type
+        List<Product> filteredProducts = getProducts(selectedType);
+
+        // Update the RecyclerView with the filtered products
+        RecyclerView recyclerView = findViewById(R.id.products_recycler_view);
+        recyclerView.setAdapter(new ProductsAdapter(filteredProducts));
+    }
+
+    @NotNull
+    private static List<Product> getProducts(String selectedType) {
         List<Product> filteredProducts = new ArrayList<>();
         for (Product product : Product.products) {
             if (product.getType().equalsIgnoreCase(selectedType)) {
                 filteredProducts.add(product);
             }
         }
-
-        // Update the RecyclerView with the filtered products
-        RecyclerView recyclerView = findViewById(R.id.products_recycler_view);
-        recyclerView.setAdapter(new ProductsAdapter(filteredProducts));
+        return filteredProducts;
     }
 }

@@ -62,8 +62,10 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
         // Set the click listener for the remove button for the current cart item
         holder.removeCartItemButton.setOnClickListener(view -> {
             cart.remove(position);
-            notifyItemRemoved(position);
-            parent.renderOrderElements();
+            view.postDelayed(() -> {
+                notifyItemRemoved(position);
+                parent.renderOrderElements();
+            }, 100);
         });
     }
 
