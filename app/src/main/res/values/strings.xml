@@ -31,4 +31,11 @@
     </string>
     <string name="products_option">Pregled proizvoda</string>
     <string name="promotions_option">Početna</string>
+    <string name="user_details">Izmena detalja o nalogu</string>
+    <string name="user_details_updated">Podaci uspešno ažurirani</string>
+    <string name="first_name_label">"Ime: "</string>
+    <string name="last_name_label">Prezime:</string>
+    <string name="phone_label">Telefon:</string>
+    <string name="address_label">Adresa:</string>
+    <string name="confirm">Potvrdi</string>
 </resources>

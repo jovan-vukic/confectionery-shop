@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UserDetailsActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/user_details_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        <TextView
+                android:id="@+id/name_label_user_details_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/first_name_label"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toStartOf="@id/name_user_details_activity"
+                app:layout_constraintStart_toStartOf="@id/user_details_layout"
+                app:layout_constraintTop_toTopOf="@id/user_details_layout"
+                app:layout_constraintBottom_toTopOf="@id/last_name_label_user_details_activity"/>
+
+        <EditText
+                android:id="@+id/name_user_details_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/name_label_user_details_activity"
+                app:layout_constraintEnd_toEndOf="@id/user_details_layout"
+                app:layout_constraintTop_toTopOf="@id/user_details_layout"/>
+
+        <TextView
+                android:id="@+id/last_name_label_user_details_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/last_name_label"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toStartOf="@id/last_name_user_details_activity"
+                app:layout_constraintStart_toStartOf="@id/user_details_layout"
+                app:layout_constraintTop_toBottomOf="@id/name_label_user_details_activity"
+                app:layout_constraintBottom_toTopOf="@id/phone_label_user_details_activity"/>
+
+        <EditText
+                android:id="@+id/last_name_user_details_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/last_name_label_user_details_activity"
+                app:layout_constraintEnd_toEndOf="@id/user_details_layout"
+                app:layout_constraintTop_toBottomOf="@id/name_user_details_activity"/>
+
+        <TextView
+                android:id="@+id/phone_label_user_details_activity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/phone_label"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintStart_toStartOf="@id/user_details_layout"
+                app:layout_constraintEnd_toStartOf="@id/phone_user_details_activity"
+                app:layout_constraintTop_toBottomOf="@id/last_name_label_user_details_activity"
+                app:layout_constraintBottom_toTopOf="@id/address_label_user_details_activity"/>
+
+        <EditText
+                android:id="@+id/phone_user_details_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/phone_label_user_details_activity"
+                app:layout_constraintEnd_toEndOf="@id/user_details_layout"
+                app:layout_constraintTop_toBottomOf="@id/last_name_user_details_activity"/>
+
+        <TextView
+                android:id="@+id/address_label_user_details_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/address_label"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toStartOf="@id/address_user_details_activity"
+                app:layout_constraintStart_toStartOf="@id/user_details_layout"
+                app:layout_constraintTop_toBottomOf="@id/phone_label_user_details_activity"
+                app:layout_constraintBottom_toBottomOf="@id/user_details_layout"/>
+
+        <EditText
+                android:id="@+id/address_user_details_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/user_details_layout"
+                app:layout_constraintEnd_toEndOf="@id/user_details_layout"
+                app:layout_constraintStart_toEndOf="@id/address_label_user_details_activity"
+                app:layout_constraintTop_toBottomOf="@id/phone_user_details_activity"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+            android:id="@+id/confirm_btn_user_details_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/confirm"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_details_layout"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
