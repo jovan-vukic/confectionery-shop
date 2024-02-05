@@ -1,5 +1,7 @@
 package com.example.pki_mobile;
 
+import android.view.MenuItem;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -19,6 +21,7 @@ public class CartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
         getSupportActionBar().setTitle(getString(R.string.cart));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Set up the RecyclerView for the products
         RecyclerView recyclerView = findViewById(R.id.cart_recycler_view);
@@ -57,5 +60,15 @@ public class CartActivity extends AppCompatActivity {
             Toast.makeText(this, getString(R.string.order_success), Toast.LENGTH_LONG).show();
             finish();
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        // If user presses back button in action bar, go back to previous activity
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -70,6 +70,7 @@
     <string name="text_placeholder">Neki tekst</string>
     <string name="previous_symbol"><![CDATA[<]]></string>
     <string name="next_symbol"><![CDATA[>]]></string>
+    <string name="no_items_in_cart">Korpa je prazna :(</string>
     <string-array name="product_types">
         <item>Torte</item>
         <item>Kolaci</item>
