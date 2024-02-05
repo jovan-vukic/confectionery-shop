@@ -55,6 +55,8 @@
     <string name="add_comment_text">Dodaj komentar</string>
     <string name="comments">Komentari</string>
     <string name="add_comment">Dodaj komentar</string>
+    <string name="date_text_placeholder">Datum</string>
+    <string name="comment_text_placeholder">Komentar</string>
     <string-array name="product_types">
         <item>Torte</item>
         <item>Kolaci</item>

@@ -22,9 +22,9 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHo
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView title;
-        TextView price;
-        ImageView image;
+        private final TextView title;
+        private final TextView price;
+        private final ImageView image;
 
         public ViewHolder(View itemView) {
             super(itemView);

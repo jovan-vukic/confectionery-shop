@@ -73,7 +73,9 @@ public class ProductDetailsActivity extends AppCompatActivity {
         // Create all comments button click listener
         Button allCommentsButton = findViewById(R.id.all_comments_btn_product_details);
         allCommentsButton.setOnClickListener(v -> {
+            // Start the AllCommentsActivity with the product ID
             Intent intent = new Intent(ProductDetailsActivity.this, AllCommentsActivity.class);
+            intent.putExtra("productId", productID);
             startActivity(intent);
         });
 
