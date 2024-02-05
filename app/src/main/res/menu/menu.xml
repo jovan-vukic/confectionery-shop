@@ -5,7 +5,8 @@
             android:id="@+id/cart_option_menu"
             android:title="@string/cart"
             android:icon="@drawable/ic_baseline_shopping_cart_24"
-            app:showAsAction="ifRoom"/>
+            app:showAsAction="ifRoom"
+            android:visible="false"/>
     <item
             android:id="@+id/login_option_menu"
             android:title="@string/login"

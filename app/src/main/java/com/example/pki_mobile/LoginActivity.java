@@ -1,5 +1,6 @@
 package com.example.pki_mobile;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -33,6 +34,9 @@ public class LoginActivity extends AppCompatActivity {
                 if (user.getUsername().equals(usernameString) && user.getPassword().equals(passwordString)) {
                     User.currentUser = user;
                     Toast.makeText(LoginActivity.this, R.string.login_success, Toast.LENGTH_SHORT).show();
+
+                    // Go back to previous activity
+                    setResult(RESULT_OK, new Intent());
                     finish();
                     return;
                 }

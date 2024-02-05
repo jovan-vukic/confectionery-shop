@@ -1,10 +1,11 @@
 package com.example.pki_mobile;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -14,6 +15,15 @@ import com.example.pki_mobile.utility.Product;
 import com.example.pki_mobile.utility.User;
 
 public class ProductsActivity extends AppCompatActivity {
+    private final ActivityResultLauncher<Intent> loginLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == RESULT_OK) {
+                    // User is logged in so update menu items
+                    invalidateOptionsMenu();
+                }
+            }
+    );
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +41,19 @@ public class ProductsActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Add menu to the action bar if it is present
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
+
+        // Check if user is logged in or not and update the menu accordingly
+        if (User.currentUser == null) {
+            menu.findItem(R.id.login_option_menu).setVisible(true);
+            menu.findItem(R.id.user_option_menu).setVisible(false);
+            menu.findItem(R.id.cart_option_menu).setVisible(false);
+        } else {
+            menu.findItem(R.id.login_option_menu).setVisible(false);
+            menu.findItem(R.id.user_option_menu).setVisible(true);
+            menu.findItem(R.id.cart_option_menu).setVisible(true);
+        }
+
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -52,7 +74,7 @@ public class ProductsActivity extends AppCompatActivity {
         } else if (item.getItemId() == R.id.login_option_menu) {
             // User is not logged in so redirect to login page
             Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
+            loginLauncher.launch(intent);
             return true;
         } else if (item.getItemId() == R.id.about_us_option_menu) {
             // Redirect to About Us page
