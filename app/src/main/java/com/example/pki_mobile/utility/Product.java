@@ -4,6 +4,7 @@ import com.example.pki_mobile.R;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Product {
@@ -105,7 +106,7 @@ public class Product {
         }
     }
 
-    public static class Comment {
+    public static class Comment implements Comparable<Comment> {
         private final int userId;
         private final String comment;
         private final LocalDateTime date;
@@ -127,6 +128,13 @@ public class Product {
         public LocalDateTime getDate() {
             return date;
         }
+
+        @Override
+        public int compareTo(Comment o) {
+            if (this.date.isBefore(o.date)) return 1;
+            if (this.date.isAfter(o.date)) return -1;
+            return 0;
+        }
     }
 
     public Product(String name, int image, String description, int price, String type) {
@@ -140,6 +148,7 @@ public class Product {
     // Methods
     public void addComment(int userId, String comment) {
         comments.add(new Comment(userId, comment, LocalDateTime.now()));
+        Collections.sort(comments);
     }
 
     public void addIngredient(String ingredient) {
