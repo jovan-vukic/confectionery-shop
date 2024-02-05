@@ -21,8 +21,8 @@
                 android:text="@string/first_name_label"
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toStartOf="@id/name_user_details_activity"
                 app:layout_constraintStart_toStartOf="@id/user_details_layout"
+                app:layout_constraintEnd_toStartOf="@id/name_user_details_activity"
                 app:layout_constraintTop_toTopOf="@id/user_details_layout"
                 app:layout_constraintBottom_toTopOf="@id/last_name_label_user_details_activity"/>
 
@@ -41,8 +41,8 @@
                 android:text="@string/last_name_label"
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toStartOf="@id/last_name_user_details_activity"
                 app:layout_constraintStart_toStartOf="@id/user_details_layout"
+                app:layout_constraintEnd_toStartOf="@id/last_name_user_details_activity"
                 app:layout_constraintTop_toBottomOf="@id/name_label_user_details_activity"
                 app:layout_constraintBottom_toTopOf="@id/phone_label_user_details_activity"/>
 
@@ -81,8 +81,8 @@
                 android:text="@string/address_label"
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toStartOf="@id/address_user_details_activity"
                 app:layout_constraintStart_toStartOf="@id/user_details_layout"
+                app:layout_constraintEnd_toStartOf="@id/address_user_details_activity"
                 app:layout_constraintTop_toBottomOf="@id/phone_label_user_details_activity"
                 app:layout_constraintBottom_toBottomOf="@id/user_details_layout"/>
 
@@ -90,10 +90,10 @@
                 android:id="@+id/address_user_details_activity"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/user_details_layout"
                 app:layout_constraintEnd_toEndOf="@id/user_details_layout"
                 app:layout_constraintStart_toEndOf="@id/address_label_user_details_activity"
-                app:layout_constraintTop_toBottomOf="@id/phone_user_details_activity"/>
+                app:layout_constraintTop_toBottomOf="@id/phone_user_details_activity"
+                app:layout_constraintBottom_toBottomOf="@id/user_details_layout"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
@@ -136,10 +136,10 @@
                 android:text="@string/password_label"
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintBottom_toTopOf="@id/new_password_label_user_details_activity"
-                app:layout_constraintEnd_toStartOf="@id/password_user_details_activity"
                 app:layout_constraintStart_toStartOf="@id/password_change_layout"
-                app:layout_constraintTop_toTopOf="@id/password_change_layout"/>
+                app:layout_constraintEnd_toStartOf="@id/password_user_details_activity"
+                app:layout_constraintTop_toTopOf="@id/password_change_layout"
+                app:layout_constraintBottom_toTopOf="@id/new_password_label_user_details_activity"/>
 
         <EditText
                 android:id="@+id/password_user_details_activity"
@@ -180,8 +180,8 @@
                 android:text="@string/repeat_password_label"
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toStartOf="@id/repeated_password_user_details_activity"
                 app:layout_constraintStart_toStartOf="@id/password_change_layout"
+                app:layout_constraintEnd_toStartOf="@id/repeated_password_user_details_activity"
                 app:layout_constraintTop_toBottomOf="@id/new_password_label_user_details_activity"
                 app:layout_constraintBottom_toBottomOf="@id/password_change_layout"/>
 
@@ -206,7 +206,7 @@
             android:layout_marginEnd="16dp"
             android:text="@string/change_password"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/password_change_layout"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

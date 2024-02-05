@@ -47,4 +47,8 @@
     <string name="password_changed">Lozinka uspešno promenjena</string>
     <string name="user_not_found">Korisnik nije ulogovan</string>
     <string name="password_not_changed">Neispravna lozinka</string>
+    <string name="username_label">Korisničko ime:</string>
+    <string name="buyer_text">Kupac</string>
+    <string name="employee_text">Zaposleni</string>
+    <string name="sign_in_text">Nemate nalog? Kreirajte nalog.</string>
 </resources>

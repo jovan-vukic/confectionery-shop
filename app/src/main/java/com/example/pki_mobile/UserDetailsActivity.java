@@ -25,6 +25,7 @@ public class UserDetailsActivity extends AppCompatActivity {
         Button confirmButton = findViewById(R.id.confirm_btn_user_details_activity);
         Button changePasswordButton = findViewById(R.id.change_password_btn_user_details_activity);
 
+        // Set the values of the views if the user is logged in
         if (User.currentUser != null) {
             // Set the values of the views
             name.setText(User.currentUser.getName());
