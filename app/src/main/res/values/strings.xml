@@ -61,6 +61,7 @@
     <string name="enter_comment_placeholder">Ovde unesite komentar...</string>
     <string name="empty_comment">Morate zadati komentar</string>
     <string name="comment_added">Komentar dodat</string>
+    <string name="order_placed">Vaša porudžbina je uspešno prihvaćena.</string>
     <string-array name="product_types">
         <item>Torte</item>
         <item>Kolaci</item>

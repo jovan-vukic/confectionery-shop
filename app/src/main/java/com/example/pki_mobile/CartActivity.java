@@ -48,6 +48,11 @@ public class CartActivity extends AppCompatActivity {
     private void placeOrder() {
         // Place the order and clear the cart
         if (User.currentUser != null && User.currentUser.getCart() != null) {
+            // Place the order and simulate notification to the user
+            User.currentUser.addOrder(User.currentUser.getCart());
+            User.currentUser.addNotification(getString(R.string.order_placed));
+
+            // Clear the cart
             User.currentUser.getCart().clear();
             Toast.makeText(this, getString(R.string.order_success), Toast.LENGTH_LONG).show();
             finish();

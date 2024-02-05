@@ -84,9 +84,12 @@ public class ProductDetailsActivity extends AppCompatActivity {
         addCommentButton.setOnClickListener(v -> {
             // Start the AddCommentActivity with the product ID
             if (User.currentUser == null) {
+                // Redirect to home page if user is not logged in
+                Intent intent = new Intent(this, ProductsActivity.class);
+
                 // Show error message
-                Toast.makeText(this, R.string.login_required, Toast.LENGTH_SHORT).show();
-                return;
+                Toast.makeText(this, R.string.login_required, Toast.LENGTH_LONG).show();
+                startActivity(intent);
             }
 
             Intent intent = new Intent(ProductDetailsActivity.this, AddCommentActivity.class);

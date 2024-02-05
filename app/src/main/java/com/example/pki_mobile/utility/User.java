@@ -82,7 +82,6 @@ public class User {
     public static class Notification {
         private String comment;
         private LocalDateTime date;
-        private boolean read = false;
 
         public Notification(String comment, LocalDateTime date) {
             this.comment = comment;
@@ -103,14 +102,6 @@ public class User {
 
         public void setDate(LocalDateTime date) {
             this.date = date;
-        }
-
-        public boolean isRead() {
-            return read;
-        }
-
-        public void setRead(boolean read) {
-            this.read = read;
         }
     }
 
@@ -139,8 +130,8 @@ public class User {
         orders.add(order);
     }
 
-    public void addNotification(String comment, LocalDateTime date) {
-        notifications.add(new Notification(comment, date));
+    public void addNotification(String comment) {
+        notifications.add(new Notification(comment, LocalDateTime.now()));
     }
 
     // Getters and setters
