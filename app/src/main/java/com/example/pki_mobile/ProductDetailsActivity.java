@@ -90,6 +90,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                 // Show error message
                 Toast.makeText(this, R.string.login_required, Toast.LENGTH_LONG).show();
                 startActivity(intent);
+                return;
             }
 
             Intent intent = new Intent(ProductDetailsActivity.this, AddCommentActivity.class);

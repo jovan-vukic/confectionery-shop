@@ -112,6 +112,11 @@ public class ProductsActivity extends AppCompatActivity {
             Intent intent = new Intent(this, AboutUsActivity.class);
             startActivity(intent);
             return true;
+        } else if (item.getItemId() == R.id.notifications_user_option) {
+            // Redirect to Notifications page
+            Intent intent = new Intent(this, NotificationsActivity.class);
+            startActivity(intent);
+            return true;
         } else if (item.getItemId() == R.id.edit_details_user_option || item.getItemId() == R.id.change_password_user_option) {
             // Redirect to Edit Details page
             Intent intent = new Intent(this, UserDetailsActivity.class);

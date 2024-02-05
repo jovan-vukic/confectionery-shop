@@ -1,6 +1,7 @@
 package com.example.pki_mobile;
 
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,8 +34,19 @@ public class AllCommentsActivity extends AppCompatActivity {
 
         // Set up the RecyclerView for the comments
         RecyclerView recyclerView = findViewById(R.id.comments_recycler_view);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new CommentsAdapter(product.getComments()));
+
+        if (product.getComments().isEmpty()) {
+            recyclerView.setVisibility(View.GONE);
+            findViewById(R.id.header_layout_all_comments).setVisibility(View.GONE);
+            findViewById(R.id.message_all_comments_activity).setVisibility(View.VISIBLE);
+        } else {
+            recyclerView.setVisibility(View.VISIBLE);
+            findViewById(R.id.header_layout_all_comments).setVisibility(View.VISIBLE);
+            findViewById(R.id.message_all_comments_activity).setVisibility(View.GONE);
+
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            recyclerView.setAdapter(new CommentsAdapter(product.getComments()));
+        }
     }
 
     @Override

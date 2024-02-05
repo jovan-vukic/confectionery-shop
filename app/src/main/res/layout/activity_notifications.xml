@@ -6,9 +6,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="16dp"
-        tools:context=".AllCommentsActivity">
+        tools:context=".NotificationsActivity">
     <LinearLayout
-            android:id="@+id/header_layout_all_comments"
+            android:id="@+id/header_layout_notifications"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -30,23 +30,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2.8"
                 android:gravity="start"
-                android:text="@string/comment_text_placeholder"
+                android:text="@string/notification_text_placeholder"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/comments_recycler_view"
+            android:id="@+id/notifications_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header_layout_all_comments"/>
+            app:layout_constraintTop_toBottomOf="@id/header_layout_notifications"/>
 
     <TextView
-            android:id="@+id/message_all_comments_activity"
+            android:id="@+id/message_notifications_activity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/no_comments"
+            android:text="@string/no_notifications"
             android:visibility="gone"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             app:layout_constraintTop_toTopOf="parent"

@@ -20,6 +20,9 @@
             android:visible="false">
         <menu>
             <item
+                    android:id="@+id/notifications_user_option"
+                    android:title="@string/notifications"/>
+            <item
                     android:id="@+id/edit_details_user_option"
                     android:title="@string/edit_profile"/>
             <item

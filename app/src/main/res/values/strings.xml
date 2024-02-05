@@ -62,6 +62,10 @@
     <string name="empty_comment">Morate zadati komentar</string>
     <string name="comment_added">Komentar dodat</string>
     <string name="order_placed">Vaša porudžbina je uspešno prihvaćena.</string>
+    <string name="notifications">Obaveštenja</string>
+    <string name="notification_text_placeholder">Obaveštenje</string>
+    <string name="no_notifications">Nema obaveštenja</string>
+    <string name="no_comments">Nema komentara</string>
     <string-array name="product_types">
         <item>Torte</item>
         <item>Kolaci</item>
