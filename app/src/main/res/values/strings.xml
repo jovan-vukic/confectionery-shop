@@ -51,4 +51,8 @@
     <string name="buyer_text">Kupac</string>
     <string name="employee_text">Zaposleni</string>
     <string name="sign_in_text">Nemate nalog? Kreirajte nalog.</string>
+    <string-array name="product_types">
+        <item>Torte</item>
+        <item>Kolaci</item>
+    </string-array>
 </resources>

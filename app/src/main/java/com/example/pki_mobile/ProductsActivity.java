@@ -4,6 +4,10 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -14,6 +18,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.pki_mobile.adapters.ProductsAdapter;
 import com.example.pki_mobile.utility.Product;
 import com.example.pki_mobile.utility.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductsActivity extends AppCompatActivity {
     private final ActivityResultLauncher<Intent> loginLauncher = registerForActivityResult(
@@ -32,6 +39,29 @@ public class ProductsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_products);
         getSupportActionBar().setTitle(R.string.products);
+
+        // Set up the spinner for the product types
+        Spinner typeSpinner = findViewById(R.id.type_spinner_product_activity);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.product_types,
+                android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        typeSpinner.setAdapter(adapter);
+
+        // Set up the listener for the spinner to update the RecyclerView when a new type is selected
+        typeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedType = (String) parent.getItemAtPosition(position);
+                updateRecyclerView(selectedType);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Do nothing
+            }
+        });
 
         // Set up the RecyclerView for the products
         RecyclerView recyclerView = findViewById(R.id.products_recycler_view);
@@ -94,5 +124,19 @@ public class ProductsActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void updateRecyclerView(String selectedType) {
+        // Filter the products based on the selected type
+        List<Product> filteredProducts = new ArrayList<>();
+        for (Product product : Product.products) {
+            if (product.getType().equalsIgnoreCase(selectedType)) {
+                filteredProducts.add(product);
+            }
+        }
+
+        // Update the RecyclerView with the filtered products
+        RecyclerView recyclerView = findViewById(R.id.products_recycler_view);
+        recyclerView.setAdapter(new ProductsAdapter(filteredProducts));
     }
 }
