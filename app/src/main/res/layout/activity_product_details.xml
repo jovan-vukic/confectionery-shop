@@ -80,21 +80,10 @@
             android:layout_height="36dp"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="16dp"
-            android:background="@color/white"
             android:gravity="center_vertical"
             android:spinnerMode="dialog"
             app:layout_constraintBottom_toTopOf="@id/add_to_cart_btn_product_details"
             app:layout_constraintLeft_toRightOf="@id/quantity_product_details" />
-
-    <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toBottomOf="@id/quantity_spinner_product_details"
-            app:layout_constraintEnd_toEndOf="@id/quantity_spinner_product_details"
-            app:layout_constraintTop_toTopOf="@id/quantity_spinner_product_details"
-            app:srcCompat="@drawable/ic_baseline_arrow_drop_down_24"/>
 
     <Button
             android:id="@+id/add_to_cart_btn_product_details"

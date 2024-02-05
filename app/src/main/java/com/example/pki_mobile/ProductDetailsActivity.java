@@ -65,7 +65,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                 User.currentUser.addCartItem(product, quantity);
 
                 // Show success message and go back to previous activity
-                Toast.makeText(this, R.string.added_to_cart, Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.added_to_cart, Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
