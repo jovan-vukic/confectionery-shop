@@ -107,6 +107,11 @@ public class ProductsActivity extends AppCompatActivity {
             Intent intent = new Intent(this, LoginActivity.class);
             loginLauncher.launch(intent);
             return true;
+        } else if (item.getItemId() == R.id.promotions_option_menu) {
+            // Redirect to Promotions page
+            Intent intent = new Intent(this, PromotionsActivity.class);
+            startActivity(intent);
+            return true;
         } else if (item.getItemId() == R.id.about_us_option_menu) {
             // Redirect to About Us page
             Intent intent = new Intent(this, AboutUsActivity.class);

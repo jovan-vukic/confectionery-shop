@@ -37,9 +37,6 @@
             android:id="@+id/promotions_option_menu"
             android:title="@string/promotions_option"/>
     <item
-            android:id="@+id/products_option_menu"
-            android:title="@string/products_option"/>
-    <item
             android:id="@+id/about_us_option_menu"
             android:title="@string/about_us"/>
 </menu>

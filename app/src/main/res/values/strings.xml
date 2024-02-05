@@ -30,7 +30,7 @@
         \n\nNedelja: Zatvoreno
     </string>
     <string name="products_option">Pregled proizvoda</string>
-    <string name="promotions_option">Početna</string>
+    <string name="promotions_option">Promocije</string>
     <string name="user_details">Izmena podataka</string>
     <string name="user_details_updated">Podaci uspešno ažurirani</string>
     <string name="first_name_label">"Ime: "</string>
@@ -66,6 +66,10 @@
     <string name="notification_text_placeholder">Obaveštenje</string>
     <string name="no_notifications">Nema obaveštenja</string>
     <string name="no_comments">Nema komentara</string>
+    <string name="promotions">Promocije</string>
+    <string name="text_placeholder">Neki tekst</string>
+    <string name="previous_symbol"><![CDATA[<]]></string>
+    <string name="next_symbol"><![CDATA[>]]></string>
     <string-array name="product_types">
         <item>Torte</item>
         <item>Kolaci</item>

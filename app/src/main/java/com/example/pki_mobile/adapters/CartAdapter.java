@@ -16,11 +16,11 @@ import java.util.List;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     private final List<User.CartItem> cart;
-    private final CartActivity parent;
+    private final CartActivity context;
 
-    public CartAdapter(List<User.CartItem> cart, CartActivity parent) {
+    public CartAdapter(List<User.CartItem> cart, CartActivity context) {
         this.cart = cart;
-        this.parent = parent;
+        this.context = context;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -64,7 +64,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
             cart.remove(position);
             view.postDelayed(() -> {
                 notifyItemRemoved(position);
-                parent.renderOrderElements();
+                this.context.renderOrderElements();
             }, 100);
         });
     }
