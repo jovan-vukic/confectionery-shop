@@ -82,13 +82,11 @@ public class ProductsActivity extends AppCompatActivity {
             Intent intent = new Intent(this, AboutUsActivity.class);
             startActivity(intent);
             return true;
-        } else if (item.getItemId() == R.id.edit_details_user_option) {
+        } else if (item.getItemId() == R.id.edit_details_user_option || item.getItemId() == R.id.change_password_user_option) {
             // Redirect to Edit Details page
             Intent intent = new Intent(this, UserDetailsActivity.class);
             startActivity(intent);
             return true;
-        } else if (item.getItemId() == R.id.change_password_user_option) {
-            // TODO: Redirect to Change Password page
         } else if (item.getItemId() == R.id.logout_user_option) {
             // User is logged in so logout
             User.currentUser = null;

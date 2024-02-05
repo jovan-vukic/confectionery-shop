@@ -41,4 +41,10 @@
     <string name="edit_profile">Izmeni podatke</string>
     <string name="change_password">Izmeni lozinku</string>
     <string name="logout">Izloguj se</string>
+    <string name="password_label">Lozinka:</string>
+    <string name="new_password_label">Nova lozinka:</string>
+    <string name="repeat_password_label">Ponovljena lozinka:</string>
+    <string name="password_changed">Lozinka uspešno promenjena</string>
+    <string name="user_not_found">Korisnik nije ulogovan</string>
+    <string name="password_not_changed">Neispravna lozinka</string>
 </resources>
