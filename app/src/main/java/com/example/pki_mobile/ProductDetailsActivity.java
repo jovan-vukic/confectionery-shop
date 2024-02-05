@@ -53,8 +53,8 @@ public class ProductDetailsActivity extends AppCompatActivity {
         Button addToCartButton = findViewById(R.id.add_to_cart_btn_product_details);
         addToCartButton.setOnClickListener(view -> {
             if (User.currentUser == null) {
-                // Redirect to login page if user is not logged in
-                Intent intent = new Intent(ProductDetailsActivity.this, LoginActivity.class);
+                // Redirect to home page if user is not logged in
+                Intent intent = new Intent(ProductDetailsActivity.this, ProductsActivity.class);
 
                 // Show error message
                 Toast.makeText(this, R.string.login_required, Toast.LENGTH_LONG).show();
