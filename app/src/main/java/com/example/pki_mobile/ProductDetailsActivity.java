@@ -69,6 +69,19 @@ public class ProductDetailsActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        // Create all comments button click listener
+        Button allCommentsButton = findViewById(R.id.all_comments_btn_product_details);
+        allCommentsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(ProductDetailsActivity.this, AllCommentsActivity.class);
+            startActivity(intent);
+        });
+
+        Button addCommentButton = findViewById(R.id.add_comment_btn_product_details);
+        addCommentButton.setOnClickListener(v -> {
+            Intent intent = new Intent(ProductDetailsActivity.this, AddCommentActivity.class);
+            startActivity(intent);
+        });
     }
 
     @Override

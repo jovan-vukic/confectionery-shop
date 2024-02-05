@@ -5,5 +5,7 @@
     <color name="pane_background_color">#E1E0E4</color>
     <color name="item_background">#FEFEFE</color>
     <color name="button_color">#9B21D9</color>
+    <color name="button_color_2">#D3482B</color>
+    <color name="button_color_3">#EEEEF1</color>
     <color name="yellow">#E1DF9B</color>
 </resources>

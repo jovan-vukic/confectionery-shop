@@ -51,6 +51,10 @@
     <string name="buyer_text">Kupac</string>
     <string name="employee_text">Zaposleni</string>
     <string name="sign_in_text">Nemate nalog? Kreirajte nalog.</string>
+    <string name="all_comments_text">Vidi komentare</string>
+    <string name="add_comment_text">Dodaj komentar</string>
+    <string name="comments">Komentari</string>
+    <string name="add_comment">Dodaj komentar</string>
     <string-array name="product_types">
         <item>Torte</item>
         <item>Kolaci</item>
