@@ -2,6 +2,7 @@ package com.example.pki_mobile;
 
 import android.content.Intent;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.*;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,7 +44,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         price.setText(getString(R.string.price_complex, product.getPrice()));
 
         // Set adapter to quantity spinner with quantity values
-        Integer[] quantityValues = new Integer[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        Integer[] quantityValues = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         Spinner quantitySpinner = findViewById(R.id.quantity_spinner_product_details);
 
         ArrayAdapter<Integer> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, quantityValues);
@@ -97,6 +98,12 @@ public class ProductDetailsActivity extends AppCompatActivity {
             intent.putExtra("productId", productID);
             startActivity(intent);
         });
+
+        boolean isLoggedIn = User.currentUser != null;
+        findViewById(R.id.add_comment_btn_product_details).setVisibility(isLoggedIn ? View.VISIBLE : View.GONE);
+        findViewById(R.id.quantity_product_details).setVisibility(isLoggedIn ? View.VISIBLE : View.GONE);
+        findViewById(R.id.quantity_spinner_product_details).setVisibility(isLoggedIn ? View.VISIBLE : View.GONE);
+        findViewById(R.id.add_to_cart_btn_product_details).setVisibility(isLoggedIn ? View.VISIBLE : View.GONE);
     }
 
     @Override

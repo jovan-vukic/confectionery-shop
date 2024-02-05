@@ -1,6 +1,7 @@
 package com.example.pki_mobile;
 
 import android.view.MenuItem;
+import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,12 +24,22 @@ public class CartActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(getString(R.string.cart));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // Set up the RecyclerView for the products
-        RecyclerView recyclerView = findViewById(R.id.cart_recycler_view);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        // Set up the RecyclerView for the cart
+        RecyclerView recyclerView = findViewById(R.id.cart_recycler_view);
         List<User.CartItem> cart = User.currentUser != null && User.currentUser.getCart() != null ? User.currentUser.getCart() : new ArrayList<>();
-        recyclerView.setAdapter(new CartAdapter(cart, this));
+        if (cart.isEmpty()) {
+            recyclerView.setVisibility(View.GONE);
+            findViewById(R.id.message_cart_activity).setVisibility(View.VISIBLE);
+            findViewById(R.id.cart_order_pane_layout).setVisibility(View.GONE);
+        } else {
+            recyclerView.setVisibility(View.VISIBLE);
+            findViewById(R.id.message_cart_activity).setVisibility(View.GONE);
+            findViewById(R.id.cart_order_pane_layout).setVisibility(View.VISIBLE);
+
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            recyclerView.setAdapter(new CartAdapter(cart, this));
+        }
 
         // Set up the order button and total price label
         renderOrderElements();

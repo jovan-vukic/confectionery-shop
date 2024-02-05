@@ -17,6 +17,19 @@
             tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/cart_item"/>
 
+
+    <TextView
+            android:id="@+id/message_cart_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_items_in_cart"
+            android:layout_marginTop="32dp"
+            android:visibility="gone"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
     <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cart_order_pane_layout"
             android:layout_width="0dp"
