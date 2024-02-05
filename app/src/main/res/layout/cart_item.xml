@@ -56,9 +56,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_delete_24"
-            app:tint="@color/white"
-            android:background="@color/button_color"
-            android:layout_margin="16dp"
+            android:background="@android:color/transparent"
+            app:tint="@color/button_color"
+            android:padding="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
