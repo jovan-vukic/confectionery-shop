@@ -41,6 +41,7 @@ public class UserDetailsActivity extends AppCompatActivity {
                 User.currentUser.setAddress(address.getText().toString());
             }
             Toast.makeText(this, getString(R.string.user_details_updated), Toast.LENGTH_SHORT).show();
+            finish();
         });
     }
 

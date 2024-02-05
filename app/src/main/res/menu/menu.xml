@@ -17,7 +17,19 @@
             android:title="@string/login"
             android:icon="@drawable/ic_baseline_user_24"
             app:showAsAction="ifRoom"
-            android:visible="false"/>
+            android:visible="false">
+        <menu>
+            <item
+                    android:id="@+id/edit_details_user_option"
+                    android:title="@string/edit_profile"/>
+            <item
+                    android:id="@+id/change_password_user_option"
+                    android:title="@string/change_password"/>
+            <item
+                    android:id="@+id/logout_user_option"
+                    android:title="@string/logout"/>
+        </menu>
+    </item>
     <item
             android:id="@+id/promotions_option_menu"
             android:title="@string/promotions_option"/>

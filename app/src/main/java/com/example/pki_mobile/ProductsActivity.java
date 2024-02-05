@@ -3,6 +3,7 @@ package com.example.pki_mobile;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.SubMenu;
 import android.widget.Toast;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -80,6 +81,18 @@ public class ProductsActivity extends AppCompatActivity {
             // Redirect to About Us page
             Intent intent = new Intent(this, AboutUsActivity.class);
             startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.edit_details_user_option) {
+            // Redirect to Edit Details page
+            Intent intent = new Intent(this, UserDetailsActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.change_password_user_option) {
+            // TODO: Redirect to Change Password page
+        } else if (item.getItemId() == R.id.logout_user_option) {
+            // User is logged in so logout
+            User.currentUser = null;
+            invalidateOptionsMenu();
             return true;
         }
         return super.onOptionsItemSelected(item);
