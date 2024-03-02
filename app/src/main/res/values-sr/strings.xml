@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Slatki zalogaji</string>
+    <string name="product_text_placeholder">Proizvod</string>
+    <string name="price_simple">%1$d RSD</string>
+    <string name="price_complex">Cena: %1$d RSD</string>
+    <string name="quantity">Količina:</string>
+    <string name="quantity_value">%1$d x</string>
+    <string name="add_to_cart">Dodaj u korpu</string>
+    <string name="username_placeholder">Korisničko ime</string>
+    <string name="password_placeholder">Šifra</string>
+    <string name="login">Uloguj se</string>
+    <string name="cart">Korpa</string>
+    <string name="products">Proizvodi</string>
+    <string name="product_details">Detalji o proizvodu</string>
+    <string name="invalid_product">Proizvod nije pronađen</string>
+    <string name="login_required">Prvo treba da se ulogujete</string>
+    <string name="added_to_cart">Proizvod je dodat u korpu</string>
+    <string name="login_error">Pogrešno korisničko ime ili šifra</string>
+    <string name="login_success">Uspešno ste ulogovani</string>
+    <string name="total_price">Ukupno: %1$d RSD</string>
+    <string name="order_success">Zahtev za poručivanjem je uspešno poslat</string>
+    <string name="order">Plati</string>
+    <string name="about_us">O nama</string>
+    <string name="about_us_description">
+        Adresa: ul. Slatkih Snova 123, Beograd
+        \n\nTelefon: +381 12 345 678
+        \n\nEmail: info@slatkizalogaji.com
+        \n\n\nRadno Vreme:
+        \n\nPonedeljak - Subota: 9:00 - 20:00
+        \n\nNedelja: Zatvoreno
+    </string>
+    <string name="products_option">Pregled proizvoda</string>
+    <string name="promotions_option">Promocije</string>
+    <string name="user_details">Izmena podataka</string>
+    <string name="user_details_updated">Podaci uspešno ažurirani</string>
+    <string name="first_name_label">"Ime: "</string>
+    <string name="last_name_label">Prezime:</string>
+    <string name="phone_label">Telefon:</string>
+    <string name="address_label">Adresa:</string>
+    <string name="confirm">Potvrdi</string>
+    <string name="edit_profile">Izmeni podatke</string>
+    <string name="change_password">Izmeni lozinku</string>
+    <string name="logout">Izloguj se</string>
+    <string name="password_label">Lozinka:</string>
+    <string name="new_password_label">Nova lozinka:</string>
+    <string name="repeat_password_label">Ponovljena lozinka:</string>
+    <string name="password_changed">Lozinka uspešno promenjena</string>
+    <string name="user_not_found">Korisnik nije ulogovan</string>
+    <string name="password_not_changed">Neispravna lozinka</string>
+    <string name="username_label">Korisničko ime:</string>
+    <string name="buyer_text">Kupac</string>
+    <string name="employee_text">Zaposleni</string>
+    <string name="sign_in_text">Nemate nalog? Kreirajte nalog.</string>
+    <string name="all_comments_text">Vidi komentare</string>
+    <string name="add_comment_text">Dodaj komentar</string>
+    <string name="comments">Komentari</string>
+    <string name="add_comment">Dodaj komentar</string>
+    <string name="date_text_placeholder">Datum</string>
+    <string name="comment_text_placeholder">Komentar</string>
+    <string name="enter_comment_text">Unesi komentar:</string>
+    <string name="enter_comment_placeholder">Ovde unesite komentar…</string>
+    <string name="empty_comment">Morate zadati komentar</string>
+    <string name="comment_added">Komentar dodat</string>
+    <string name="order_placed">Vaša porudžbina je uspešno prihvaćena.</string>
+    <string name="notifications">Obaveštenja</string>
+    <string name="notification_text_placeholder">Obaveštenje</string>
+    <string name="no_notifications">Nema obaveštenja</string>
+    <string name="no_comments">Nema komentara</string>
+    <string name="promotions">Promocije</string>
+    <string name="text_placeholder">Neki tekst</string>
+    <string name="previous_symbol"><![CDATA[<]]></string>
+    <string name="next_symbol"><![CDATA[>]]></string>
+    <string name="no_items_in_cart">Korpa je prazna :(</string>
+    <string name="register">Registracija</string>
+    <string-array name="product_types">
+        <item>Torte</item>
+        <item>Kolači</item>
+    </string-array>
+</resources>

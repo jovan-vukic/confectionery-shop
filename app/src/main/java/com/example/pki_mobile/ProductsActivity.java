@@ -3,7 +3,6 @@ package com.example.pki_mobile;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.SubMenu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -149,7 +148,9 @@ public class ProductsActivity extends AppCompatActivity {
     private static List<Product> getProducts(String selectedType) {
         List<Product> filteredProducts = new ArrayList<>();
         for (Product product : Product.products) {
-            if (product.getType().equalsIgnoreCase(selectedType)) {
+            boolean cakesSelected = selectedType.equals("Cakes") || selectedType.equals("Torte");
+
+            if (product.getType().equals(cakesSelected ? "torte" : "kolaci")) {
                 filteredProducts.add(product);
             }
         }

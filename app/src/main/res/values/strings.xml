@@ -1,78 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Slatki zalogaji</string>
-    <string name="product_text_placeholder">Proizvod</string>
+    <string name="app_name">Sweet Bites</string>
+    <string name="product_text_placeholder">Product</string>
     <string name="price_simple">%1$d RSD</string>
-    <string name="price_complex">Cena: %1$d RSD</string>
-    <string name="quantity">Količina:</string>
+    <string name="price_complex">Price: %1$d RSD</string>
+    <string name="quantity">Quantity:</string>
     <string name="quantity_value">%1$d x</string>
-    <string name="add_to_cart">Dodaj u korpu</string>
-    <string name="username_placeholder">Korisničko ime</string>
-    <string name="password_placeholder">Šifra</string>
-    <string name="login">Uloguj se</string>
-    <string name="cart">Korpa</string>
-    <string name="products">Proizvodi</string>
-    <string name="product_details">Detalji o proizvodu</string>
-    <string name="invalid_product">Proizvod nije pronađen</string>
-    <string name="login_required">Prvo treba da se ulogujete</string>
-    <string name="added_to_cart">Proizvod je dodat u korpu</string>
-    <string name="login_error">Pogrešno korisničko ime ili šifra</string>
-    <string name="login_success">Uspešno ste ulogovani</string>
-    <string name="total_price">Ukupno: %1$d RSD</string>
-    <string name="order_success">Zahtev za poručivanjem je uspešno poslat</string>
-    <string name="order">Plati</string>
-    <string name="about_us">O nama</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="username_placeholder">Username</string>
+    <string name="password_placeholder">Password</string>
+    <string name="login">Login</string>
+    <string name="cart">Cart</string>
+    <string name="products">Products</string>
+    <string name="product_details">Product details</string>
+    <string name="invalid_product">Product not found</string>
+    <string name="login_required">You need to log in first</string>
+    <string name="added_to_cart">Product has been added to cart</string>
+    <string name="login_error">Wrong username or password</string>
+    <string name="login_success">You are successfully logged in</string>
+    <string name="total_price">Total: %1$d RSD</string>
+    <string name="order_success">The order request was successfully sent</string>
+    <string name="order">Pay</string>
+    <string name="about_us">About us</string>
     <string name="about_us_description">
-        Adresa: ul. Slatkih Snova 123, Beograd
-        \n\nTelefon: +381 12 345 678
+        Address: ul. Slatkih Snova 123, Belgrade
+        \n\nPhone: +381 12 345 678
         \n\nEmail: info@slatkizalogaji.com
-        \n\n\nRadno Vreme:
-        \n\nPonedeljak - Subota: 9:00 - 20:00
-        \n\nNedelja: Zatvoreno
+        \n\n\nWorking hours:
+        \n\nMonday - Saturday: 9:00 - 20:00
+        \n\nSunday: Closed
     </string>
-    <string name="products_option">Pregled proizvoda</string>
-    <string name="promotions_option">Promocije</string>
-    <string name="user_details">Izmena podataka</string>
-    <string name="user_details_updated">Podaci uspešno ažurirani</string>
-    <string name="first_name_label">"Ime: "</string>
-    <string name="last_name_label">Prezime:</string>
-    <string name="phone_label">Telefon:</string>
-    <string name="address_label">Adresa:</string>
-    <string name="confirm">Potvrdi</string>
-    <string name="edit_profile">Izmeni podatke</string>
-    <string name="change_password">Izmeni lozinku</string>
-    <string name="logout">Izloguj se</string>
-    <string name="password_label">Lozinka:</string>
-    <string name="new_password_label">Nova lozinka:</string>
-    <string name="repeat_password_label">Ponovljena lozinka:</string>
-    <string name="password_changed">Lozinka uspešno promenjena</string>
-    <string name="user_not_found">Korisnik nije ulogovan</string>
-    <string name="password_not_changed">Neispravna lozinka</string>
-    <string name="username_label">Korisničko ime:</string>
-    <string name="buyer_text">Kupac</string>
-    <string name="employee_text">Zaposleni</string>
-    <string name="sign_in_text">Nemate nalog? Kreirajte nalog.</string>
-    <string name="all_comments_text">Vidi komentare</string>
-    <string name="add_comment_text">Dodaj komentar</string>
-    <string name="comments">Komentari</string>
-    <string name="add_comment">Dodaj komentar</string>
-    <string name="date_text_placeholder">Datum</string>
-    <string name="comment_text_placeholder">Komentar</string>
-    <string name="enter_comment_text">Unesi komentar:</string>
-    <string name="enter_comment_placeholder">Ovde unesite komentar...</string>
-    <string name="empty_comment">Morate zadati komentar</string>
-    <string name="comment_added">Komentar dodat</string>
-    <string name="order_placed">Vaša porudžbina je uspešno prihvaćena.</string>
-    <string name="notifications">Obaveštenja</string>
-    <string name="notification_text_placeholder">Obaveštenje</string>
-    <string name="no_notifications">Nema obaveštenja</string>
-    <string name="no_comments">Nema komentara</string>
-    <string name="promotions">Promocije</string>
-    <string name="text_placeholder">Neki tekst</string>
+    <string name="products_option">Product overview</string>
+    <string name="promotions_option">Promotions</string>
+    <string name="user_details">Edit user details</string>
+    <string name="user_details_updated">Details successfully updated</string>
+    <string name="first_name_label">Name:</string>
+    <string name="last_name_label">Last name:</string>
+    <string name="phone_label">Phone:</string>
+    <string name="address_label">Address:</string>
+    <string name="confirm">Confirm</string>
+    <string name="edit_profile">Change details</string>
+    <string name="change_password">Change password</string>
+    <string name="logout">Logout</string>
+    <string name="password_label">Password:</string>
+    <string name="new_password_label">New password:</string>
+    <string name="repeat_password_label">Repeated password:</string>
+    <string name="password_changed">Password successfully changed</string>
+    <string name="user_not_found">The user is not logged in</string>
+    <string name="password_not_changed">Invalid password</string>
+    <string name="username_label">Username:</string>
+    <string name="buyer_text">Buyer</string>
+    <string name="employee_text">Employee</string>
+    <string name="sign_in_text">No account? Create an account.</string>
+    <string name="all_comments_text">See comments</string>
+    <string name="add_comment_text">Add a comment</string>
+    <string name="comments">Comments</string>
+    <string name="add_comment">Add a comment</string>
+    <string name="date_text_placeholder">Date</string>
+    <string name="comment_text_placeholder">Comment</string>
+    <string name="enter_comment_text">Enter a comment:</string>
+    <string name="enter_comment_placeholder">Please enter a comment here…</string>
+    <string name="empty_comment">You must enter a comment</string>
+    <string name="comment_added">Comment has been added</string>
+    <string name="order_placed">Your order has been accepted.</string>
+    <string name="notifications">Notifications</string>
+    <string name="notification_text_placeholder">Notification</string>
+    <string name="no_notifications">There are no notifications</string>
+    <string name="no_comments">There are no comments</string>
+    <string name="promotions">Promotions</string>
+    <string name="text_placeholder">Some text</string>
     <string name="previous_symbol"><![CDATA[<]]></string>
     <string name="next_symbol"><![CDATA[>]]></string>
-    <string name="no_items_in_cart">Korpa je prazna :(</string>
+    <string name="no_items_in_cart">Cart is empty :(</string>
+    <string name="register">Register</string>
     <string-array name="product_types">
-        <item>Torte</item>
-        <item>Kolaci</item>
+        <item>Cakes</item>
+        <item>Cookies</item>
     </string-array>
 </resources>
